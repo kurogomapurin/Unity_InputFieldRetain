@@ -16,7 +16,7 @@ public class InputFieldRetain : MonoBehaviour{
     }	
     // Update is called once per frame
     void Update () {
-	if(keyboard != null){
+	if(keyboard != null && EventSystem.current.currentSelectedGameObject.Equals(this.gameObject)){
 	    if(keyboard.done){
 		//Save
 		if(name != "")PlayerPrefs.SetString(name,text.text);
